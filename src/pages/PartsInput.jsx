@@ -42,7 +42,7 @@ export default function PartsInput() {
   };
 
   const calculate = async () => {
-    const res = await api.post("/calculate", project);
+    const res = await api.post("/api/calculate", project);
     setProject({ ...project, results: res.data });
     navigate("/results");
   };
